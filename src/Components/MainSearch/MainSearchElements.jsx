@@ -27,6 +27,7 @@ export const SearchBtn = styled.nav`
     margin-right: 24px;
     justify-content:center;
     margin-top: 1rem;
+    cursor: pointer;
 `
 export const SearchIcon = styled(Search)`
     color: #e40475;
@@ -50,5 +51,23 @@ export const MainSearchSection = styled.div`
     @media screen and (max-width:768px){
         display: flex;
         flex-direction: column;
+    }
+`
+export const SearchBtnLink = styled.button`
+    border-radius: 4px;
+    background: #e40475;
+    padding:10px 22px;
+    margin: 0 0.5rem;
+    color:#fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+
+    &:hover{
+        background:#48e0e4;
+        transition: all 0.2s ease-in-out;
+        color:#0e0220;
     }
 `
