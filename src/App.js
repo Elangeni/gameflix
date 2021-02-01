@@ -2,7 +2,7 @@
 import './App.css';
 import Navbar from './Components/Navbar';
 import MainSearch from './Components/MainSearch';
-import SearchResult from './Components/SearchResults'
+import Cards from './Components/SearchResults/App'
 import { BrowserRouter as Router } from 'react-router-dom'
 import React, { Component } from 'react'
 
@@ -18,7 +18,7 @@ class App extends Component {
       <Router>
       <Navbar/>
       <MainSearch/>
-      {/* <SearchResult games ={this.state.game}/> */}
+      <Cards/>
     </Router>
     )
   }

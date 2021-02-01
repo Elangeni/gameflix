@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import {AiOutlineSearch as Search} from 'react-icons/ai';
 
 export const Form = styled.form`
-width: (100vw)/2;
 background-color: #0e0220;
-padding: 3rem;
+display: flex;
+flex-direction: row;
+ margin-left: 10rem;
 
 
 @media screen and (max-width: 768px){
@@ -19,6 +20,7 @@ export const SearchBar = styled.input`
     color: #e40474;
     background-color: #0e0220;
     width:100%;
+    
 `
 
 export const SearchBtn = styled.nav`
@@ -46,7 +48,8 @@ export const MainImage = styled.img`
 
 export const MainSearchSection = styled.div`
     display:flex;
-    margin:5rem 2rem;
+    flex-direction:row;
+     margin: 2rem;
 
     @media screen and (max-width:768px){
         display: flex;
