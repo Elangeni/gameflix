@@ -18,7 +18,7 @@ class App extends Component {
       <Router>
       <Navbar/>
       <MainSearch/>
-      <Cards/>
+      {/* <Cards/> */}
     </Router>
     )
   }

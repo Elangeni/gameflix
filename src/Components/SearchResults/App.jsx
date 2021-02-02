@@ -31,7 +31,7 @@ class Cards extends Component {
   renderGames(){
     return this.state.games.map(game => {
       return (
-          <div class="col-md-4 col-lg-3 col-sm-6 col-xs-12">
+          <div class="col-md-4 col-lg-3 col-sm-6">
               <div id="one">
               <Card>
                 <SearchImage src={game.background_image} alt={game.name}/>
