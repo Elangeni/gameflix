@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import {AiOutlineSearch as Search} from 'react-icons/ai';
+import { AiOutlineSearch as Search } from 'react-icons/ai';
 
 export const Form = styled.form`
 background-color: #0e0220;
 display: flex;
 flex-direction: row;
- margin-left: 10rem;
+margin: 0 1rem;
+width:100%;
 
 
 @media screen and (max-width: 768px){
@@ -60,7 +61,7 @@ export const SearchBtnLink = styled.button`
     border-radius: 4px;
     background: #e40475;
     padding:10px 22px;
-    margin: 0 0.5rem;
+    margin-left: 0 0.5rem;
     color:#fff;
     border: none;
     outline: none;
@@ -76,7 +77,15 @@ export const SearchBtnLink = styled.button`
 `
 
 export const SearchImage = styled.img`
-    width:100%;
+    // width:100%;
+    // height: 100%;
+    // float: left;
+    width:  200px;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
 
     // @media screen and (max-width:768px){
     //     width: 100%;
@@ -87,10 +96,20 @@ export const SearchImage = styled.img`
 
 export const Card = styled.div`
   margin: 1rem;
+//   border: 1px solid #e40475;
+text-align: center;
+  justify-content: center;
+  align-items:center;
 
-`;
+`
 
-export const Display = styled.div `
-    display: flex;
-    flex-direct: row;
+export const GameLink = styled.a`
+cursor:pointer;
+justify-content: center;
+align-items:center;
+margin: 0 30%;
+
+&:hover{
+    border: 1px solid #e40475;
+}
 `
