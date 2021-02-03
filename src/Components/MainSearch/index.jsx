@@ -36,10 +36,14 @@ class MainSearch extends React.Component {
         event.preventDefault();
     }
 
-    getSingleGame(id) {
-        console.log('Game with id number ' + id);
-        // event.preventDefault();
-    }
+    // getSingleGame(id) {
+    //     console.log('Game with id number ' + id);
+    //     // event.preventDefault();
+    // }
+
+    getSingleGame = (game) => {
+        alert(game.name);
+      }
 
     componentDidMount() {
         const APIKey = '85edc930625b426997cf69801cbefa62';
@@ -76,7 +80,7 @@ class MainSearch extends React.Component {
                             <h5 class="card-title">{game.name}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Released on: {game.released}</h6>
                             <p class="card-text">Rating: {game.rating}</p>
-                            <GameLink onSubmit={this.getSingleGame(game.id)}>Learn More</GameLink>
+                            <GameLink onClick={() => this.getSingleGame(game)}>Learn More</GameLink>
                         </Card>
                         
                     </div>

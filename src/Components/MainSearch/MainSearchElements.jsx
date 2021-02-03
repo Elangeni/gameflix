@@ -103,11 +103,21 @@ text-align: center;
 
 `
 
-export const GameLink = styled.a`
+export const GameLink = styled.button`
 cursor:pointer;
 justify-content: center;
 align-items:center;
-margin: 0 30%;
+
+border-radius: 4px;
+background: #e40475;
+padding:10px 22px;
+margin: 0 0.5rem;
+color:#fff;
+border: none;
+outline: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
 
 &:hover{
     border: 1px solid #e40475;
