@@ -15,7 +15,6 @@ class Popup extends React.Component {
 
           <h3>Released On: {this.props.data.get("released")}</h3>
           <h4>Rating: {this.props.data.get("rating")}</h4>
-          {/* <h5>{this.props.data.get("genres")}</h5> */}
           <p>Genres</p>
           <ul>
             {this.props.data.get("genres").map(genre => (
@@ -30,11 +29,6 @@ class Popup extends React.Component {
             ))}
           </ul>
           <br/>
-          <div className='screenshots'>
-          {this.props.data.get("screenshots").map(pic => (
-              <img src={pic.image} alt=""/>
-            ))}
-          </div>
           <button onClick={this.props.closePopup}>close me</button>
         </div>
       </div>

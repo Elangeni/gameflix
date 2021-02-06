@@ -86,7 +86,7 @@ class MainSearch extends React.Component {
                             <h5 class="card-title">{game.name}</h5>
                             <h6 class="card-subtitle mb-2 text-muted">Released on: {game.released}</h6>
                             <p class="card-text">Rating: {game.rating}</p>
-                            <GameLink onClick={() => this.togglePopup(game)}>Learn More</GameLink>
+                            <GameLink bgColor="rgba(50,50,50,0.4)" onClick={() => this.togglePopup(game)}>Learn More</GameLink>
                         </Card>
 
                     </div>
@@ -181,7 +181,6 @@ class MainSearch extends React.Component {
 
                         {this.state.showPopup ?
                             <Popup
-                                text='Click "Close Button" to hide popup'
                                 closePopup={this.togglePopup.bind(this)}
                                 data={this.state.popupData}
                             />
