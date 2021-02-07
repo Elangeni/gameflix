@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { AiOutlineSearch as Search } from 'react-icons/ai';
+import {AiOutlineClose} from 'react-icons/ai';
 
 export const Form = styled.form`
 background-color: #0e0220;

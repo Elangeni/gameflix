@@ -116,6 +116,7 @@ class MainSearch extends React.Component {
             map.set("released", game.released);
             map.set("screenshots", game.short_screenshots);
             map.set("stores", game.stores);
+            map.set("platforms", game.platforms);
             //this.setState({ popupData : map });
             this.changePopupData(map);
             // console.log(this.state)
@@ -176,8 +177,7 @@ class MainSearch extends React.Component {
                     </div>
                     
                     <div>
-                        <h1> Simple Popup Example In React Application </h1>
-                        <button onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button>
+                        {/* <button onClick={this.togglePopup.bind(this)}> Click To Launch Popup</button> */}
 
                         {this.state.showPopup ?
                             <Popup
