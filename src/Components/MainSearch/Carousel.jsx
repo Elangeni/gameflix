@@ -1,6 +1,7 @@
 import React from 'react'
 import 'react-slideshow-image/dist/styles.css'
 import { Slide, Fade, Zoom } from 'react-slideshow-image';
+import './style.css';
 
 class ImageCarousel extends React.Component{
     

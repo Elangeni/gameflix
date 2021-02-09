@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {NavLink as Link} from 'react-router-dom';
 import {FaBars} from 'react-icons/fa';
+import {CgProfile} from 'react-icons/cg'
 
 export const Nav = styled.nav`
     background: #0e0220;
@@ -37,6 +38,10 @@ export const Bars = styled(FaBars)`
         font-size: 1.8rem;
         cursor:pointer
     }
+`
+
+export const Profile = styled(CgProfile)`
+    color: #e40475;
 `
 
 export const NavMenu = styled.div`

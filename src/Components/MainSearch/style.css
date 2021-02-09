@@ -3,6 +3,7 @@ img {
   /* height: 200px; */
 }
 
+
 button {
   cursor: pointer;
   justify-content: center;
@@ -35,6 +36,7 @@ button {
   display: flex;
   flex-direction: row;
   border: 6px solid #e40475;
+  color: #fff;
 }
 
 .popup\_inner {
@@ -63,7 +65,7 @@ button {
 
 .slideshow {
   width: 60%;
-  padding: 10%;
+  padding: 5%;
 }
 
 .game-info{

@@ -102,6 +102,11 @@ class MainSearch extends React.Component {
         this.setState({  
              showPopup: !this.state.showPopup  
         });
+        if(!this.state.showPopup){
+            document.getElementById("display-root").style.filter = 'blur(8px)';
+        }else{
+            document.getElementById("display-root").style.filter = 'blur(0px)';
+        }
         
         console.log(this.state)
     }
@@ -117,6 +122,7 @@ class MainSearch extends React.Component {
             map.set("screenshots", game.short_screenshots);
             map.set("stores", game.stores);
             map.set("platforms", game.platforms);
+            map.set("id", game.id);
             //this.setState({ popupData : map });
             this.changePopupData(map);
             // console.log(this.state)
@@ -169,7 +175,7 @@ class MainSearch extends React.Component {
 
                         </Form>
                     </MainSearchSection>
-                    <div>
+                    <div id='display-root'>
                         <center><h1>{this.state.screenTitle}</h1></center>
                         <div class="row">
                             {this.renderGames()}

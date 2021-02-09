@@ -51,6 +51,20 @@ class Popup extends React.Component {
     return result;
   }
 
+  getDescription(){
+    let id = this.props.data.get("id");
+
+    const APIKey = '85edc930625b426997cf69801cbefa62';
+        fetch('https://api.rawg.io/api/games?key=' + APIKey + '&id=' + id)
+            .then(res => res.json())
+            .then((data) => {
+                //this.setState({ games: data.results, loading: false })
+                console.log(data)
+                // this.setState({ games: data.results, loading: false, screenTitle: 'Search results for ' + value })
+            })
+            .catch(console.log)
+  }
+
   render() {
     return (
       <div className='popup'>
