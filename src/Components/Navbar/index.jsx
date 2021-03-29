@@ -1,7 +1,8 @@
 import React from 'react'
-import { Nav, NavLink, Bars, Profile, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
+import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
 
 class Navbar extends React.Component {
+    
 
     constructor(props) {
         super(props);
@@ -9,6 +10,7 @@ class Navbar extends React.Component {
             data: this.props.status
         };
     }
+    
 
     render() {
         return (
@@ -27,7 +29,6 @@ class Navbar extends React.Component {
 
                     {this.state.data.status ?
                         <NavBtn>
-                            <Profile/>
                         </NavBtn>
                         :
                         <NavBtn onClick={() => {
@@ -46,10 +47,11 @@ class Navbar extends React.Component {
                                 console.log("login was pressed")
                             }}>Login</NavBtnLink>
                         </NavBtn>
+                        
                     }
 
 
-
+                    
                 </Nav>
             </>
         )
