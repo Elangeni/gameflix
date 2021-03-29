@@ -3,35 +3,12 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import MainSearch from './Components/MainSearch';
 import { BrowserRouter as Router } from 'react-router-dom'
-import React, { Component, useState} from 'react'
-import { node } from 'prop-types';
+import React, { useState} from 'react'
 import firebase from "firebase";
 
-// class App extends Component {
-  
-//   constructor(props){
-//     super(props);
-//         this.state = {
-//             userStatus: {
-//               loggedIn: "false",
-//               user:null,
-//               avatar:null
-//             }
-//         };
-//   }
-  
-//   render() {
-//     return (
-//       <Router>
-//       <Navbar status={this.state.userStatus}/>
-//       <MainSearch/>
-//     </Router>
-//     )
-//   }
-// }
 
 const App = () => {
-const [userStatus, setStatus] = useState(
+const [userStatus] = useState(
   {
     loggedIn: "false",
     user:null,
