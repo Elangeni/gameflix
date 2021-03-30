@@ -4,6 +4,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import firebase from "firebase/app";
 
+require('firebase/auth');
+require("firebase/firestore");
+
 const firebaseConfig = {
   apiKey: "AIzaSyAqoMQLifHG4SCkDUqQpwaTm5R0825PcoY",
     authDomain: "gameflix-c788b.firebaseapp.com",

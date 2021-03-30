@@ -1,0 +1,51 @@
+.signin-box {
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /* background-color: white; */
+    background-color: #0e0220;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    border: 6px solid #e40475;
+    color: #fff;
+    z-index: 100;
+    text-align: center;
+    padding: 3%;
+
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+}
+
+.signin-form {
+    display: flex;
+    flex-direction: column;
+}
+
+input{
+    width: 50%;
+    display: block;
+    margin: 0 auto 0.25rem;
+}
+
+.signin-btn{
+    display: block;
+    margin: 0.75rem auto 0;
+}
+
+.close-btn{
+    display: block;
+    width: 6rem;
+}
+

@@ -1,61 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Nav, NavLink, Bars, NavMenu, NavBtn, NavBtnLink } from './NavbarElements'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import SignIn from "./SignIn";
+import SignUp from "./SignUp";
+import ProfilePage from "./ProfilePage";
+import PasswordReset from "./PasswordReset";
 
-class Navbar extends React.Component {
-    
+const Navbar = ({ userStatus }) => {
+    const [status, setStatus] = useState(userStatus);
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: this.props.status
-        };
-    }
-    
+    return (
 
-    render() {
-        return (
-            <>
-                <Nav>
-                    <NavLink to="/">
-                        <h1>Gameflix</h1>
-                    </NavLink>
-                    <Bars />
+        <>
+            <Nav>
+                <NavLink to="/">
+                    <h1>Gameflix</h1>
+                </NavLink>
+                <Bars />
 
-                    <NavMenu>
-                        <NavLink to="www.google.com" activeStyle>
-                            About
+                <NavMenu>
+                    <NavLink to="www.google.com" activeStyle>
+                        About
                        </NavLink>
-                    </NavMenu>
+                </NavMenu>
 
-                    {this.state.data.status ?
+                {status ?
+                    <ProfilePage />
+                    :
+                    <Router>
                         <NavBtn>
-                        </NavBtn>
-                        :
-                        <NavBtn onClick={() => {
-                            console.log(this.state.data)
-                        }}>
-                            <NavBtnLink to="/signup" onClick={() => {
-                                this.setState({data: {
-                                    userStatus: {
-                                      loggedIn: "true",
-                                      user:null,
-                                      avatar:null
-                                    }
-                                }});
+                            <NavBtnLink to="/signUp" onClick={() => {
+                                setStatus({
+                                    loggedIn: "true",
+                                    user: null,
+                                    avatar: null
+                                }
+                                );
+
                             }}>Sign Up</NavBtnLink>
-                            <NavBtnLink to="/login" onClick={() => {
-                                console.log("login was pressed")
-                            }}>Login</NavBtnLink>
+                            <NavBtnLink to="/login">Login</NavBtnLink>
                         </NavBtn>
-                        
-                    }
+
+                        <Route path="/login" component={SignIn} />
+                    </Router>
 
 
-                    
-                </Nav>
-            </>
-        )
-    }
+
+                }
+
+
+            </Nav>
+        </>
+    )
 }
 
 export default Navbar;
